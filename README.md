@@ -1,2 +1,2 @@
-# start_here_learn_css_layout_tutsplus
+# Start here: Learn CSS Layout (tutsplus)
 Learn some CSS layout
