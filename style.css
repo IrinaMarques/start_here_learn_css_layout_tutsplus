@@ -51,6 +51,10 @@ img {
 	height: auto; /*correct aspect ratio of every image resized by the browser*/
 }
 
+header, footer {
+	text-align: center; /*align center inline elements*/
+}
+
 .hidden { /*later will understand this*/
 	clip: rect(1px);
 	position: absolute !important;
@@ -62,12 +66,33 @@ img {
 .wrapper { /*set the size of the content, with % they allways respond to the size of the screen*/
 	width: 100%;
 	max-width: 80rem;
+	margin: 0 auto; /*shorthand - most common used*/
+	/*equal width - that will center, work woth block elements
+	margin-left: auto; 
+	margin-right: auto; */
 }
 
 .col_01 {
 	width: 62.5%;
+	float: left; /*alignment - set the side*/ 
 }
 
 .col_02 {
 	width: 37.5%;
+	float: right;
+}
+
+/*because we are using float left and right 
+.clear {
+	clear: both; 
+	} */
+
+.clearfix:before,
+.clearfix:after {
+	content:"";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
 }
