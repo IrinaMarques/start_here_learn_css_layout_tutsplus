@@ -115,3 +115,92 @@ header, footer {
 .clearfix:after {
 	clear: both;
 }
+
+@media (max-width: 85rem) {/*@media to know the breaking points the value is same as the wrapper plus the padding*/
+	body {
+		padding: 0 2.5rem;
+	}
+}
+
+@media (max-width: 80rem) {/*at some point there is too much space between columns*/
+	.wrapper {
+		padding: 4.5rem;
+	}
+	.col_02 { /*padding to the same amout*/
+		padding-left: 4.5rem;
+	}
+}
+
+@media (max-width: 75rem) {/*space between columns*/
+	.wrapper {
+		padding: 4rem;
+	}
+	.col_02 { /*padding to the same amout*/
+		padding-left: 4rem;
+	}
+}
+
+@media (max-width: 70rem) {/*space between columns*/
+	.wrapper {
+		padding: 3.5rem;
+	}
+	.col_02 { /*padding to the same amout*/
+		padding-left: 3.5rem;
+	}
+}
+
+@media (max-width: 65rem) {/*space between columns*/
+	.wrapper {
+		padding: 3rem;
+	}
+	.col_02 { /*padding to the same amout*/
+		padding-left: 3rem;
+	}
+}
+
+@media (max-width: 60rem) { /*960 (size of screen here collapse)/16 (font-size)=60 so it's the point for single column*/
+	h1 {
+		font-size: 5.6vw;/*allows to size text to the viewport - vw*, media queries + vw = good responsive site*/
+	}
+	h2 {
+		font-size: 3.9vw;
+	}
+	.wrapper {/*last media querie we say to apply padding to 65rem, so we have to change it*/
+		padding: 4rem;
+	}
+	.col_01, .col_02 { /*these two classes it's because he are float one to left an another to the right*/
+		float: none; /*remove float behavior*/
+		width: 100%;
+	}
+	.col_02 { /*to remove the padding on the left*/
+	padding-left: 0;
+	padding-top: 4rem; /*because we have too small space between the section and the aside*/
+	}
+}  
+
+@media (max-width: 55rem) { /*keeps shriking as we get smaller*/
+	.wrapper {
+		padding: 3.5rem;
+	}
+}
+
+@media (max-width: 45rem) { /*keeps shriking as we get smaller*/
+	body {
+		padding: 0; /*remove the body padding at this small amout of space*/
+	}
+	h1 {
+		font-size: 6.5vw;/* this the headers don't get small then the text*/
+	}
+	h2 {
+		font-size: 5vw;
+	}
+	.wrapper {
+		padding: 3rem;
+	}
+}
+
+@media (max-width: 35rem) { /*keeps shriking as we get smaller*/
+	.wrapper {
+		padding: 2.5rem;
+	}
+}
